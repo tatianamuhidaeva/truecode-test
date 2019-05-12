@@ -48,7 +48,7 @@
     </div>
     <div class="reserv">
       <form action="#" class="reserv__form">
-        <h2 class="reserv__title d-sm-none">Бронирование<span class="d-md-none"> номеров</span></h2>
+        <h2 class="reserv__title">Бронирование<span class="reserv-hidden"> номеров</span></h2>
         <div class="reserv__form-elem">
           <input type="date" id="reserv__input-in" class="input reserv__input reserv__input-date" value="2019-03-04">
           <label for="reserv__input-in">Заезд</label>
@@ -61,7 +61,11 @@
           <input type="number" id="reserv__input-persons" class="input reserv__input reserv__input-persons" value="1">
           <label for="reserv__input-persons">Гости</label>
         </div>
-        <button type="submit" class="btn reserv__btn">Найти<span class="d-md-none"> номер</span></button>
+        <!-- <div style="width: 100%;" height="1px" width="300px"></div> -->
+        <!-- <div> -->
+          <button type="submit" class="btn reserv__btn">Найти<span class="reserv-hidden"> номер</span></button>
+
+        <!-- </div> -->
       </form>
     </div>
     <div class="elk d-xs-none">
@@ -76,6 +80,7 @@
     </div>
   </div><!-- end .container -->
   <script src="js/paralax.js"></script>
+  <script src="js/toggleMenu.js"></script>
 </body>
 
 </html>

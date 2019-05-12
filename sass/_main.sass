@@ -76,24 +76,18 @@
         transform: translate(-50%, calc(-50% + 4px))
     &:hover
       background-color: transparent
-      // & .header__toggle-elem:first-child
-      //   width: 10px
-      //   transform: translate(-9px , -50%) rotate(-30deg)
-      //   transform-origin: left top
-      // & .header__toggle-elem:last-child
-      //   width: 10px
-      //   transform: translate(-9px, -50%) rotate(30deg)
-      //   transform-origin: left bottom
 .menu-down
   top: 0px !important
-  // animation: menu-down 0.5s forwards
-// .menu-up
-//   animation: menu-up 0.5s forwards
-
-
-
-
-
+.toggle-transform.header__toggle
+  .header__toggle-elem:first-child
+    transform: translate(-50% , 0) rotate(45deg)
+    transform-origin: center
+  .header__toggle-elem:nth-child(2)
+    display: none
+  .header__toggle-elem:last-child
+    transform: translate(-50% , 0) rotate(-45deg)
+    transform-origin: center
+    
 .caption
   position: relative
   z-index: 5
