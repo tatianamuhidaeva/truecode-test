@@ -326,6 +326,13 @@
     padding-right: 20px
     &__title
       display: none
+  .header-nav__item:hover::after
+    width: 0
+  .header__toggle:hover, .header-phone:hover
+    background-color: $primary-color
+
+
+
 @media (max-width: $xs)
   .d-xs-none
     display: none
@@ -339,9 +346,9 @@
       background-color: $primary-color
       z-index: 99
       margin-top: 0
-      &:hover
-        background-color: transparent
-        animation: rotate 0.16s 3
+      // &:hover
+      //   background-color: transparent
+      //   animation: rotate 0.16s 3
       &__img
         display: block
   .caption
@@ -377,18 +384,6 @@
       &__item
         font-size: 20px
         margin-bottom: 15px
-
-    &-phone
-      border-radius: 50%
-      width: 30px
-      height: 30px
-      padding: 5px
-      background-color: $primary-color
-      &:hover
-        background-color: transparent
-        animation: rotate 0.16s 3
-      &__img
-        display: block
     &-panel
       display: flex
     &__toggle

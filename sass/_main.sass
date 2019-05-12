@@ -87,7 +87,7 @@
   .header__toggle-elem:last-child
     transform: translate(-50% , 0) rotate(-45deg)
     transform-origin: center
-    
+
 .caption
   position: relative
   z-index: 5
@@ -228,7 +228,14 @@
     width: 161px
     text-align: center
     &::-webkit-inner-spin-button, &::-webkit-calendar-picker-indicator
-      display: none
+      position: absolute
+      left: 7px
+      top: 7px
+      width: 13px
+      height: 17px
+      opacity: 0
+      outline: none
+      cursor: pointer
     &-date
       background:
         image: url('../img/small-calendar.svg')

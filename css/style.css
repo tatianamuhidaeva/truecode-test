@@ -479,6 +479,12 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .btn:hover::before {
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes present {
   from {
     -webkit-transform: translate(-590px, -50px) scale(1.5);
@@ -884,7 +890,14 @@ a {
 }
 
 .reserv__input::-webkit-inner-spin-button, .reserv__input::-webkit-calendar-picker-indicator {
-  display: none;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 13px;
+  height: 17px;
+  opacity: 0;
+  outline: none;
+  cursor: pointer;
 }
 
 .reserv__input-date {
@@ -1359,6 +1372,12 @@ a {
   .reserv__title {
     display: none;
   }
+  .header-nav__item:hover::after {
+    width: 0;
+  }
+  .header__toggle:hover, .header-phone:hover {
+    background-color: #c7af8a;
+  }
 }
 
 @media (max-width: 660px) {
@@ -1376,11 +1395,6 @@ a {
     background-color: #c7af8a;
     z-index: 99;
     margin-top: 0;
-  }
-  .header-phone:hover {
-    background-color: transparent;
-    -webkit-animation: rotate 0.16s 3;
-            animation: rotate 0.16s 3;
   }
   .header-phone__img {
     display: block;
@@ -1434,21 +1448,6 @@ a {
   .header-nav__item {
     font-size: 20px;
     margin-bottom: 15px;
-  }
-  .header-phone {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    background-color: #c7af8a;
-  }
-  .header-phone:hover {
-    background-color: transparent;
-    -webkit-animation: rotate 0.16s 3;
-            animation: rotate 0.16s 3;
-  }
-  .header-phone__img {
-    display: block;
   }
   .header-panel {
     display: -webkit-box;
