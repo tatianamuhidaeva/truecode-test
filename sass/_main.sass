@@ -15,6 +15,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    transition-duration: 0.5s
     &__item
       position: relative
       &::after
@@ -35,11 +36,64 @@
     padding: 9px 16px 2px 13px
     margin-top: -5px
     border-radius: 10px
-    border: 1px solid #c7af8a
+    border: 1px solid $primary-color
+    transition-duration: 0.2s
     &:hover
-      background-color: #c7af8a
+      background-color: $primary-color
     &__img
       display: none
+  &-panel
+    display: none
+    flex-direction: row-reverse
+    justify-content: flex-start
+    height: 40px
+  &__toggle
+    position: relative
+    z-index: 99
+    border-radius: 50%
+    border: 1px solid $primary-color
+    background-color: $primary-color
+    width: 30px
+    height: 30px
+    margin-left: 10px
+    cursor: pointer
+    transition-duration: 0.2s
+    &-elem
+      position: absolute
+      top: 50%
+      left: 50%
+      // transform: translate(-50% -50%)
+      width: 15px
+      height: 2px
+      background-color: #000000
+      border-radius: 1px
+      transition-duration: 0.5s
+      &:first-child
+        transform: translate(-50%, calc(-50% - 4px))
+      &:nth-child(2)
+        transform: translate(-50%, -50%)
+      &:last-child
+        transform: translate(-50%, calc(-50% + 4px))
+    &:hover
+      background-color: transparent
+      // & .header__toggle-elem:first-child
+      //   width: 10px
+      //   transform: translate(-9px , -50%) rotate(-30deg)
+      //   transform-origin: left top
+      // & .header__toggle-elem:last-child
+      //   width: 10px
+      //   transform: translate(-9px, -50%) rotate(30deg)
+      //   transform-origin: left bottom
+.menu-down
+  top: 0px !important
+  // animation: menu-down 0.5s forwards
+// .menu-up
+//   animation: menu-up 0.5s forwards
+
+
+
+
+
 .caption
   position: relative
   z-index: 5
@@ -95,7 +149,7 @@
       
   &__price
     display: inline-block
-    color: #c7af8a
+    color: $primary-color
     font-size: 44px
     font-weight: 500
     line-height: 1.1

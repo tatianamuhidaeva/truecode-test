@@ -574,6 +574,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .header-nav__item {
@@ -605,6 +607,8 @@ a {
   margin-top: -5px;
   border-radius: 10px;
   border: 1px solid #c7af8a;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .header-phone:hover {
@@ -613,6 +617,67 @@ a {
 
 .header-phone__img {
   display: none;
+}
+
+.header-panel {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 40px;
+}
+
+.header__toggle {
+  position: relative;
+  z-index: 99;
+  border-radius: 50%;
+  border: 1px solid #c7af8a;
+  background-color: #c7af8a;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.header__toggle-elem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+  border-radius: 1px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.header__toggle-elem:first-child {
+  -webkit-transform: translate(-50%, calc(-50% - 4px));
+          transform: translate(-50%, calc(-50% - 4px));
+}
+
+.header__toggle-elem:nth-child(2) {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header__toggle-elem:last-child {
+  -webkit-transform: translate(-50%, calc(-50% + 4px));
+          transform: translate(-50%, calc(-50% + 4px));
+}
+
+.header__toggle:hover {
+  background-color: transparent;
+}
+
+.menu-down {
+  top: 0px !important;
 }
 
 .caption {
@@ -1285,6 +1350,8 @@ a {
     height: 30px;
     padding: 5px;
     background-color: #c7af8a;
+    z-index: 99;
+    margin-top: 0;
   }
   .header-phone:hover {
     background-color: transparent;
@@ -1309,11 +1376,39 @@ a {
 }
 
 @media (max-width: 450px) {
-  .d-xs-none {
+  .d-xxs-none {
     display: none;
   }
   .header {
-    width: 90%;
+    width: 100%;
+    position: static;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .header-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 95;
+    background-color: rgba(199, 175, 138, 0.9);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80%;
+    height: 200px;
+  }
+  .header-nav__item {
+    font-size: 20px;
+    margin-bottom: 15px;
   }
   .header-phone {
     border-radius: 50%;
@@ -1330,6 +1425,11 @@ a {
   .header-phone__img {
     display: block;
   }
+  .header-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .caption {
     margin-right: auto;
   }
@@ -1341,6 +1441,12 @@ a {
   }
   .reserv {
     width: 100%;
+  }
+  .reserv__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
