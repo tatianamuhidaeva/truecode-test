@@ -366,7 +366,7 @@ body {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -822,15 +822,14 @@ a {
 
 .reserv {
   padding: 9px 60px 8px;
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  z-index: 3;
+  left: 545px;
   right: 0;
-  width: 1375px;
+  top: auto;
   margin-left: auto;
   margin-right: 0;
   background-color: #d3c1a2;
-  -webkit-clip-path: url("#clip-elk");
-          clip-path: url("#clip-elk");
 }
 
 .reserv::before {
@@ -946,7 +945,7 @@ a {
   z-index: 1;
 }
 
-.elk__videoo {
+.elk-video {
   position: absolute;
   z-index: -1;
   left: 2px;
@@ -968,15 +967,15 @@ a {
   height: 1185px;
 }
 
-.elk-svg mask rect {
-  fill: #ffffff;
-  width: 100vw;
-  height: 100%;
-}
-
 .elk-svg-mask__elk {
   width: 1253px;
   height: 1185px;
+}
+
+.elk-svg-mask__rect {
+  fill: #ffffff;
+  width: 100vw;
+  height: 100%;
 }
 
 .elk-svg-pattern__img {
@@ -998,7 +997,7 @@ a {
   pointer-events: none;
 }
 
-@media (max-width: 1750px) {
+@media (max-width: 1850px) {
   .caption {
     width: 700px;
     margin-right: 150px;
@@ -1016,19 +1015,14 @@ a {
     font-size: 49px;
   }
   .info {
-    margin-right: 340px;
+    margin-right: 200px;
+    margin-bottom: 166px;
   }
   .reserv {
-    padding-left: 250px;
-    width: 1350px;
-  }
-  .elk {
-    left: 0;
-    right: auto;
+    left: 542px;
   }
   .elk-svg {
-    width: 1113px;
-    height: 1050px;
+    height: 1177px;
   }
 }
 
@@ -1039,7 +1033,7 @@ a {
   .caption {
     width: 700px;
     margin-right: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   .caption__sup {
     font-size: 32px;
@@ -1053,13 +1047,13 @@ a {
     font-size: 44px;
   }
   .info {
-    margin-right: 240px;
-    margin-bottom: 75px;
+    margin-right: 100px;
+    margin-bottom: 150px;
   }
   .reserv {
-    padding-right: 50px;
-    width: 1220px;
-    margin-bottom: 50px;
+    left: 540px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .reserv__form {
     -webkit-box-pack: end;
@@ -1073,21 +1067,20 @@ a {
     background-position: 51% 0;
   }
   .elk-svg {
-    width: 1055px;
-    height: auto;
+    height: 1177px;
   }
 }
 
 @media (max-width: 1500px) {
   .header {
     padding-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     font-size: 20px;
   }
   .caption {
     width: 570px;
     margin-right: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   .caption__sup {
     font-size: 27px;
@@ -1101,8 +1094,8 @@ a {
     font-size: 35px;
   }
   .info {
-    margin-right: 140px;
-    margin-bottom: 60px;
+    margin-right: 50px;
+    margin-bottom: 100px;
     width: 350px;
   }
   .info::before {
@@ -1125,9 +1118,7 @@ a {
     font-size: 16px;
   }
   .reserv {
-    padding-left: 285px;
-    width: 1115px;
-    margin-bottom: 30px;
+    left: 447px;
   }
   .reserv::before {
     top: -35px;
@@ -1146,7 +1137,7 @@ a {
     margin-right: 13px;
   }
   .reserv__input {
-    margin-right: 15px;
+    margin-right: 14px;
     width: 151px;
   }
   .reserv__input-date {
@@ -1172,15 +1163,27 @@ a {
     left: 35px;
     font-size: 12px;
   }
+  .elk-video {
+    width: 790px;
+  }
+  .elk__video {
+    width: 790px;
+  }
   .elk-svg {
-    width: 880px;
+    height: 970px;
+  }
+  .elk-svg-mask__rect {
+    width: 150%;
   }
 }
 
 @media (max-width: 1252px) {
+  .container {
+    padding-bottom: 130px;
+  }
   .header {
     padding-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 44px;
     font-size: 16px;
   }
   .header-phone {
@@ -1189,7 +1192,7 @@ a {
   }
   .caption {
     width: 430px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
   }
   .caption__sup {
     font-size: 20px;
@@ -1204,7 +1207,7 @@ a {
   }
   .info {
     margin-right: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     width: 317px;
     padding-left: 35px;
   }
@@ -1228,9 +1231,9 @@ a {
     font-size: 14px;
   }
   .reserv {
-    padding-left: 206px;
-    width: 90%;
-    margin-bottom: 30px;
+    left: 350px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .reserv::before {
     top: -28px;
@@ -1246,10 +1249,10 @@ a {
   }
   .reserv__title {
     font-size: 18px;
-    margin-right: 13px;
+    margin-right: 10px;
   }
   .reserv__input {
-    margin-right: 15px;
+    margin-right: 10px;
     width: 128px;
   }
   .reserv__input-date {
@@ -1276,8 +1279,20 @@ a {
     left: 32px;
     font-size: 11px;
   }
+  .elk-video {
+    width: 640px;
+  }
+  .elk__video {
+    width: 640px;
+  }
   .elk-svg {
-    width: 700px;
+    height: 761px;
+  }
+  .elk-svg-mask__rect {
+    width: 150%;
+  }
+  #myCanvas {
+    height: 200px;
   }
 }
 
@@ -1295,7 +1310,7 @@ a {
   }
   .caption {
     width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
   .caption__sup {
     font-size: 17px;
@@ -1310,7 +1325,7 @@ a {
   }
   .info {
     margin-right: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     width: 220px;
     padding-left: 23px;
   }
@@ -1334,12 +1349,7 @@ a {
     font-size: 11px;
   }
   .reserv {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 18%;
-    padding-right: 50px;
-    width: 82%;
-    margin-bottom: 30px;
+    left: 288px;
   }
   .reserv::before {
     top: -22px;
@@ -1384,17 +1394,38 @@ a {
     left: 27px;
     font-size: 11px;
   }
+  .elk-video {
+    width: 515px;
+  }
+  .elk__video {
+    width: 515px;
+  }
   .elk-svg {
-    width: 480px;
+    height: 628px;
+  }
+  .elk-svg-mask__rect {
+    width: 150%;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-bottom: 95px;
+  }
   .d-sm-none {
     display: none;
   }
+  .header {
+    margin-bottom: 20px;
+  }
+  .caption {
+    margin-bottom: 30px;
+  }
+  .info {
+    margin-bottom: 50px;
+  }
   .reserv {
-    padding-right: 20px;
+    left: 225px;
   }
   .reserv__title {
     display: none;
@@ -1404,6 +1435,18 @@ a {
   }
   .header__toggle:hover, .header-phone:hover {
     background-color: #c7af8a;
+  }
+  .elk-video {
+    width: 400px;
+  }
+  .elk__video {
+    width: 400px;
+  }
+  .elk-svg {
+    height: 490px;
+  }
+  .elk-svg-mask__rect {
+    width: 150%;
   }
 }
 
@@ -1437,6 +1480,9 @@ a {
   }
   .reserv {
     width: 100%;
+  }
+  #myCanvas {
+    display: none;
   }
 }
 

@@ -176,15 +176,17 @@
 
 .reserv
   padding: 9px 60px 8px
-  position: relative
-  z-index: 2
+  position: absolute
+  z-index: 3
+  left: 545px
   right: 0
-  width: 1375px
+  top: auto
+  // bottom: 100px
+  // width: 1375px
   margin-left: auto
   margin-right: 0
   // margin-bottom: 100px
   background-color: #d3c1a2
-  clip-path: url("#clip-elk")
   &::before
     content: ""
     position: absolute
@@ -274,7 +276,7 @@
   left: 0
   width: 100%
   z-index: 1
-  &__videoo
+  &-video
     position: absolute
     z-index: -1
     left: 2px
@@ -289,14 +291,14 @@
   &-svg
     width: 100%
     height: 1185px    
-    mask rect
-      fill: #ffffff
-      width: 100vw
-      height: 100%
     &-mask
       &__elk
         width: 1253px
         height: 1185px
+      &__rect
+        fill: #ffffff
+        width: 100vw
+        height: 100%
     &-pattern
       &__img
         mask: url(#mask)
