@@ -366,9 +366,9 @@ body {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
+  padding-bottom: 100px;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-image: url("../img/bg.jpg");
   background-size: cover;
 }
 
@@ -823,11 +823,14 @@ a {
 .reserv {
   padding: 9px 60px 8px;
   position: relative;
-  width: 1400px;
+  z-index: 2;
+  right: 0;
+  width: 1375px;
   margin-left: auto;
   margin-right: 0;
-  margin-bottom: 100px;
   background-color: #d3c1a2;
+  -webkit-clip-path: url("#clip-elk");
+          clip-path: url("#clip-elk");
 }
 
 .reserv::before {
@@ -938,37 +941,61 @@ a {
 .elk {
   position: absolute;
   top: 0px;
-  right: 668px;
+  left: 0;
+  width: 100%;
   z-index: 1;
 }
 
+.elk__videoo {
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 0;
+  width: 960px;
+  height: calc(100% - 4px);
+  overflow: hidden;
+}
+
+.elk__video {
+  width: 960px;
+  height: calc(100% - 4px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .elk-svg {
+  width: 100%;
+  height: 1185px;
+}
+
+.elk-svg mask rect {
+  fill: #ffffff;
+  width: 100vw;
+  height: 100%;
+}
+
+.elk-svg-mask__elk {
   width: 1253px;
   height: 1185px;
-  position: relative;
 }
 
 .elk-svg-pattern__img {
-  -webkit-animation-name: present;
-          animation-name: present;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% top;
+     object-position: 50% top;
 }
 
-.elk-svg-pattern__shadow {
-  display: none;
-}
-
-.elk-svg-pattern__grow {
-  opacity: 0;
-  -webkit-animation-name: show;
-          animation-name: show;
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
-  -webkit-animation-duration: 0.1s;
-          animation-duration: 0.1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+#myCanvas {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 1750px) {
